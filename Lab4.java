@@ -78,7 +78,7 @@ public class Lab4 {
                   try {
                      PreparedStatement prpStmt = con.prepareStatement("UPDATE posts SET title = ? WHERE ID = ?");
                      prpStmt.setInt(1, id);
-                     prpStmt.setInt(2, title);
+                     prpStmt.setString(2, title);
                      prpStmt.execute();
                      System.out.println("Post title has been updated");
                   } catch (SQLException e) {
@@ -91,7 +91,7 @@ public class Lab4 {
                   try {
                      PreparedStatement prpStmt = con.prepareStatement("UPDATE posts SET description = ? WHERE ID = ?");
                      prpStmt.setInt(1, id);
-                     prpStmt.setInt(2, description);
+                     prpStmt.setString(2, description);
                      prpStmt.execute();
                      System.out.println("Post description has been changed");
                   } catch (SQLException e) {
