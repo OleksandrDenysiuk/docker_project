@@ -16,7 +16,7 @@ public class Lab4 {
       Scanner scan = new Scanner(System.in);
       boolean run = true;
       int operation;
-      
+      scan.nextLine();
       try {
          Class.forName(jdbcDriver);
          con = DriverManager.getConnection(dbAddress + dbName, userName, password);
@@ -36,7 +36,7 @@ public class Lab4 {
          System.out.println("4. See all posts");
          System.out.println("5. Exit");
          System.out.print("Enter number of step: ");
-         operation = scan.nextInt();
+         operation = Integer.parseInt(scan.nextLine());
          switch(operation) {
             case 1: {
                System.out.println("Create new post");
