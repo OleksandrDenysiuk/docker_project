@@ -16,7 +16,6 @@ public class Lab4 {
       Scanner scan = new Scanner(System.in);
       boolean run = true;
       int operation;
-      scan.nextLine();
       try {
          Class.forName(jdbcDriver);
          con = DriverManager.getConnection(dbAddress + dbName, userName, password);
@@ -28,6 +27,7 @@ public class Lab4 {
       } catch (ClassNotFoundException | SQLException e) {
          e.printStackTrace();
       }
+      scan.nextLine();
       while(run) {
          System.out.println("\nWhat do you want to do?");
          System.out.println("1. Add new post");
