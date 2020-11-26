@@ -13,7 +13,6 @@ public class Lab4 {
    static Connection con;
 
    public static void main(String[] args) {
-      System.out.println("Hello");
       Scanner scan = new Scanner(System.in);
       boolean run = true;
       int operation;
