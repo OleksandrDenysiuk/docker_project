@@ -58,7 +58,7 @@ public class Lab4 {
             }
             case 2: {
                System.out.println("Enter ID of post: ");
-               int id = scan.nextInt();
+               int id = Integer.parseInt(scan.nextLine());
                try {
                   PreparedStatement prpStmt = con.prepareStatement("DELETE FROM posts WHERE ID = ?");
                   prpStmt.setInt(1, id);
@@ -71,7 +71,7 @@ public class Lab4 {
             }
             case 3: {
                System.out.println("Enter ID of post: ");
-               int id = scan.nextInt();
+               int id = Integer.parseInt(scan.nextLine());
                System.out.println("Title: ");
                String title = scan.nextLine();
                if(!title.isEmpty()){
