@@ -73,7 +73,7 @@ public class Lab4 {
                System.out.println("Enter ID of post: ");
                int id = scan.nextInt();
                System.out.println("Title: ");
-               String title = scan.nextInt();
+               String title = scan.nextLine();
                if(!title.isEmpty()){
                   try {
                      PreparedStatement prpStmt = con.prepareStatement("UPDATE posts SET title = ? WHERE ID = ?");
@@ -86,7 +86,7 @@ public class Lab4 {
                   }
                }
                System.out.println("Description: ");
-               String description = scan.nextInt();
+               String description = scan.nextLine();
                if(!title.isEmpty()){
                   try {
                      PreparedStatement prpStmt = con.prepareStatement("UPDATE posts SET description = ? WHERE ID = ?");
